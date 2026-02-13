@@ -1,0 +1,292 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.date {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.inputForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mainInputGroup {
+    display: flex;
+    gap: 1rem;
+}
+
+.optionsGroup {
+    display: flex;
+    gap: 1rem;
+}
+
+.selectWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    color: var(--text-secondary);
+}
+
+.select {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.dateInput {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    outline: none;
+    font-size: 0.9rem;
+    font-family: inherit;
+    color-scheme: dark;
+}
+
+.input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0.75rem 1rem;
+    color: var(--text-primary);
+    font-size: 1rem;
+    outline: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.addButton {
+    background: var(--accent-primary);
+    color: #1e293b;
+    border: none;
+    border-radius: 8px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.addButton:hover {
+    transform: scale(1.05);
+}
+
+.taskList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.taskItem {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: all 0.2s ease;
+}
+
+.taskMain {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.taskItem:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.dragHandle {
+    cursor: grab;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.dragHandle:active {
+    cursor: grabbing;
+}
+
+.completed {
+    opacity: 0.8;
+}
+
+.checkbox {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: 2px solid var(--text-secondary);
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-primary);
+    padding: 0;
+    transition: all 0.2s;
+    margin-top: 2px;
+}
+
+.completed .checkbox {
+    background: var(--success);
+    border-color: var(--success);
+}
+
+.taskContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.titleRow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.taskTitle {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.completed .taskTitle {
+    text-decoration: line-through;
+    color: var(--text-secondary);
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+}
+
+.priorityHigh {
+    background: rgba(248, 113, 113, 0.2);
+    color: #f87171;
+}
+
+.priorityMedium {
+    background: rgba(250, 204, 21, 0.2);
+    color: #facc15;
+}
+
+.priorityLow {
+    background: rgba(74, 222, 128, 0.2);
+    color: #4ade80;
+}
+
+.taskDate {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.deleteButton {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+    padding: 0.5rem;
+}
+
+.taskItem:hover .deleteButton {
+    opacity: 1;
+}
+
+.deleteButton:hover {
+    color: var(--danger);
+}
+
+/* Slider Styling */
+.progressSection {
+    padding-left: 2.75rem;
+    /* Align with text */
+    padding-right: 3rem;
+    /* Align with delete btn */
+}
+
+.sliderContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.progressLabel {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    min-width: 3ch;
+}
+
+.slider {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    outline: none;
+    background-image: linear-gradient(var(--color), var(--color));
+    background-size: var(--progress) 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.1s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.emptyState {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+}
